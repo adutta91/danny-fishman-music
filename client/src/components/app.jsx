@@ -1,26 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import MobileWarning from './mobile-warning';
+import Header from './header';
+
 export default class App extends Component {
 
   render() {
-    if (window.innerWidth < 1048) return (
-      <div>
-        Oops! The mobile site is under construction...
-        <br />
-        Please come back soon, or visit the site on device with a wider screen.
-        <br /> <br />
-        Sorry for the inconvenience! Working on making this great! :)
-        <br/> <br/>
-        Thanks!
-        <br/>
-        Arjun
-      </div>
-    );
+    if (window.innerWidth < 1048) return <MobileWarning />
 
     return (
-      <div>
-        Test
+      <div className={`landing ${this.props.page}`}>
+        <Header />
       </div>
     );
   }

@@ -9,7 +9,7 @@ import Store from './app/store';
 import AppContainer from './containers/app-container.js';
 
 import registerServiceWorker from './registerServiceWorker';
-import './stylesheets/theme.css';
+import './stylesheets/app.css';
 
 
 const routes = (

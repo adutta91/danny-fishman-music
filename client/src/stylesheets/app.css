@@ -1,0 +1,97 @@
+@keyframes drop {
+  from {
+    margin-top: -50px; }
+  to {
+    margin-top: 0; } }
+
+@keyframes grow-200 {
+  from {
+    width: 0px; }
+  to {
+    width: 200px; } }
+
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade-out {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  margin: 0;
+  color: #b5b5b5; }
+
+#danny-fishman-music-main .landing {
+  width: 100vw;
+  height: 100vh; }
+  #danny-fishman-music-main .landing.main {
+    background: no-repeat center url("http://res.cloudinary.com/dzyfczxnr/image/upload/v1486001602/fishman/IMG_1254_f2zgkq.jpg");
+    background-size: cover; }
+  #danny-fishman-music-main .landing > .header {
+    position: fixed;
+    top: 0;
+    width: calc(100% - 50px);
+    padding: 25px;
+    display: flex;
+    justify-content: center; }
+    #danny-fishman-music-main .landing > .header > .header-title {
+      background-color: rgba(0, 0, 0, 0.2);
+      text-align: center;
+      height: 80px;
+      border: 1px solid #b5b5b5;
+      padding: 20px;
+      position: relative;
+      bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      border-radius: 5px;
+      opacity: 0;
+      animation: drop .5s, fade-in .5s;
+      animation-delay: .25s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-out; }
+      #danny-fishman-music-main .landing > .header > .header-title > .title {
+        font-size: 32px; }
+      #danny-fishman-music-main .landing > .header > .header-title > .sub-title {
+        font-size: 24px; }
+    #danny-fishman-music-main .landing > .header > .tabs-wrapper {
+      width: 0;
+      height: 40px;
+      animation: grow-200 .75s;
+      animation-delay: .5s;
+      animation-fill-mode: forwards;
+      overflow: hidden;
+      border-bottom: 1px solid #b5b5b5;
+      animation-timing-function: ease-out; }
+      #danny-fishman-music-main .landing > .header > .tabs-wrapper > .tabs {
+        height: min-content;
+        display: flex;
+        justify-content: center;
+        opacity: 0;
+        animation: fade-in 1s;
+        animation-delay: .75s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out; }
+        #danny-fishman-music-main .landing > .header > .tabs-wrapper > .tabs > .header-tab {
+          padding: 5px;
+          border-radius: 3px;
+          margin: 0 15px;
+          display: flex;
+          align-items: center;
+          transition: .3s all ease-in;
+          border: 1px solid transparent;
+          cursor: pointer;
+          height: max-content;
+          width: max-content;
+          white-space: no-wrap; }
+          #danny-fishman-music-main .landing > .header > .tabs-wrapper > .tabs > .header-tab:hover {
+            border: 1px solid #b5b5b5;
+            background-color: rgba(0, 0, 0, 0.2); }
