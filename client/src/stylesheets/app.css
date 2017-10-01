@@ -4,6 +4,12 @@
   to {
     margin-top: 0; } }
 
+@keyframes rise {
+  from {
+    margin-bottom: -50px; }
+  to {
+    margin-bottom: 0; } }
+
 @keyframes grow-200 {
   from {
     width: 0px; }
@@ -26,7 +32,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
   margin: 0;
-  color: #b5b5b5; }
+  color: #ebbd87; }
 
 #danny-fishman-music-main .landing {
   width: 100vw;
@@ -45,7 +51,7 @@ body {
       background-color: rgba(0, 0, 0, 0.2);
       text-align: center;
       height: 80px;
-      border: 1px solid #b5b5b5;
+      border: 1px solid #8c602c;
       padding: 20px;
       position: relative;
       bottom: 30px;
@@ -69,7 +75,7 @@ body {
       animation-delay: .5s;
       animation-fill-mode: forwards;
       overflow: hidden;
-      border-bottom: 1px solid #b5b5b5;
+      border-bottom: 1px solid #8c602c;
       animation-timing-function: ease-out; }
       #danny-fishman-music-main .landing > .header > .tabs-wrapper > .tabs {
         height: min-content;
@@ -93,5 +99,32 @@ body {
           width: max-content;
           white-space: no-wrap; }
           #danny-fishman-music-main .landing > .header > .tabs-wrapper > .tabs > .header-tab:hover {
-            border: 1px solid #b5b5b5;
+            border: 1px solid #ebbd87;
             background-color: rgba(0, 0, 0, 0.2); }
+  #danny-fishman-music-main .landing > .footer {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; }
+    #danny-fishman-music-main .landing > .footer > .icons {
+      width: 350px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around; }
+      #danny-fishman-music-main .landing > .footer > .icons > i {
+        cursor: pointer;
+        color: #ebbd87;
+        padding: 5px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        transition: .3s all ease-in;
+        opacity: 0;
+        animation: fade-in 1s, rise .5s;
+        animation-delay: .75s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out; }
+        #danny-fishman-music-main .landing > .footer > .icons > i:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+          border: 1px solid #ebbd87; }

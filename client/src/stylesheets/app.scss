@@ -1,11 +1,19 @@
 
-$default-text-color: #b5b5b5;
+// $default-text-color: #b5b5b5;
+// $border-color:  #d7ab6b;
+$default-text-color: #ebbd87;
+$border-color:  #8c602c;
 
 
 
 @keyframes drop {
   from { margin-top: -50px; }
   to   { margin-top: 0; }
+}
+
+@keyframes rise {
+  from { margin-bottom: -50px; }
+  to   { margin-bottom: 0; }
 }
 
 @keyframes grow-200 {
@@ -53,7 +61,7 @@ body {
         background-color: rgba(0,0,0, 0.2);
         text-align: center;
         height: 80px;
-        border: 1px solid $default-text-color;
+        border: 1px solid $border-color;
         padding: 20px;
         position: relative;
         bottom: 30px;
@@ -83,7 +91,7 @@ body {
         animation-delay: .5s;
         animation-fill-mode: forwards;
         overflow: hidden;
-        border-bottom: 1px solid $default-text-color;
+        border-bottom: 1px solid $border-color;
         animation-timing-function: ease-out;
 
         >.tabs {
@@ -113,6 +121,41 @@ body {
               border: 1px solid $default-text-color;
               background-color: rgba(0,0,0, 0.2);
             }
+          }
+        }
+      }
+    }
+
+    >.footer {
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      >.icons {
+        width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        >i {
+          cursor: pointer;
+          color: $default-text-color;
+          padding: 5px;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          transition: .3s all ease-in;
+          opacity: 0;
+          animation: fade-in 1s, rise .5s;
+          animation-delay: .75s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-out;
+
+          &:hover {
+            background-color: rgba(0,0,0, 0.2);
+            border: 1px solid $default-text-color;
           }
         }
       }

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import MobileWarning from './mobile-warning';
 import Header from './header';
+import Footer from './footer';
 
 export default class App extends Component {
 
@@ -12,6 +13,7 @@ export default class App extends Component {
     return (
       <div className={`landing ${this.props.page}`}>
         <Header />
+        <Footer />
       </div>
     );
   }
