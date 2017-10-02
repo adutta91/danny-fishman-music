@@ -52,7 +52,6 @@ body {
       #danny-fishman-music-main .root > .backdrop > .header.hidden {
         display: none; }
       #danny-fishman-music-main .root > .backdrop > .header > .header-title {
-        background-color: rgba(0, 0, 0, 0.2);
         text-align: center;
         height: 80px;
         border: 1px solid #726654;
@@ -68,7 +67,7 @@ body {
         animation-delay: .25s;
         animation-fill-mode: forwards;
         animation-timing-function: ease-out;
-        color: #dbd5cf; }
+        color: #463d2a; }
         #danny-fishman-music-main .root > .backdrop > .header > .header-title > .title {
           font-size: 32px; }
         #danny-fishman-music-main .root > .backdrop > .header > .header-title > .sub-title {

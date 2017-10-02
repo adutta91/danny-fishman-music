@@ -64,7 +64,7 @@ body {
         }
 
         >.header-title {
-          background-color: rgba(0,0,0, 0.2);
+          // background-color: rgba(0,0,0, 0.2);
           text-align: center;
           height: 80px;
           border: 1px solid $border-color;
@@ -80,7 +80,7 @@ body {
           animation-delay: .25s;
           animation-fill-mode: forwards;
           animation-timing-function: ease-out;
-          color: $light-text-color;
+          color: $dark-text-color;
 
           >.title {
             font-size: 32px;
