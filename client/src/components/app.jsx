@@ -11,7 +11,7 @@ export default class App extends Component {
 
   render() {
     if (window.innerWidth < 1048) return <MobileWarning />
-    console.log(this.props.loaded);
+
     return (
       <div className='root'>
         {this.props.loaded.length < 4 ? <div>loading...</div> : null}
