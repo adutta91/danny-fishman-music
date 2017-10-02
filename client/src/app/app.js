@@ -14,7 +14,10 @@ export const toTitle = (string) => {
 };
 
 export const images = {
-  landing: 'http://res.cloudinary.com/dzyfczxnr/image/upload/v1486001602/fishman/IMG_1254_f2zgkq.jpg'
+  about: 'http://res.cloudinary.com/dzyfczxnr/image/upload/v1486001602/fishman/IMG_1254_f2zgkq.jpg',
+  main: 'https://static.pexels.com/photos/92080/pexels-photo-92080.jpeg',
+  media: 'https://static.pexels.com/photos/230800/pexels-photo-230800.jpeg',
+  tour: 'https://static.pexels.com/photos/9137/night-vintage-music-bokeh.jpg'
 };
 
 export const songTracks = [

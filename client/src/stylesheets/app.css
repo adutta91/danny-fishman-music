@@ -32,99 +32,109 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
   margin: 0;
-  color: #ebbd87; }
+  color: #463d2a; }
 
-#danny-fishman-music-main .landing {
-  width: 100vw;
-  height: 100vh; }
-  #danny-fishman-music-main .landing.main {
-    background: no-repeat center url("http://res.cloudinary.com/dzyfczxnr/image/upload/v1486001602/fishman/IMG_1254_f2zgkq.jpg");
-    background-size: cover; }
-  #danny-fishman-music-main .landing > .header {
-    position: fixed;
-    top: 0;
-    width: calc(100% - 50px);
-    padding: 25px;
-    display: flex;
-    justify-content: center; }
-    #danny-fishman-music-main .landing > .header > .header-title {
-      background-color: rgba(0, 0, 0, 0.2);
-      text-align: center;
-      height: 80px;
-      border: 1px solid #8c602c;
-      padding: 20px;
-      position: relative;
-      bottom: 30px;
+#danny-fishman-music-main .root {
+  display: flex; }
+  #danny-fishman-music-main .root > .backdrop {
+    width: 100vw;
+    height: 100vh;
+    transition: .75s all ease-in-out; }
+    #danny-fishman-music-main .root > .backdrop > .header {
+      position: fixed;
+      top: 0;
+      width: calc(100% - 50px);
+      padding: 25px;
       display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      border-radius: 5px;
-      opacity: 0;
-      animation: drop .5s, fade-in .5s;
-      animation-delay: .25s;
-      animation-fill-mode: forwards;
-      animation-timing-function: ease-out; }
-      #danny-fishman-music-main .landing > .header > .header-title > .title {
-        font-size: 32px; }
-      #danny-fishman-music-main .landing > .header > .header-title > .sub-title {
-        font-size: 24px; }
-    #danny-fishman-music-main .landing > .header > .tabs-wrapper {
-      width: 0;
-      height: 40px;
-      animation: grow-200 .75s;
-      animation-delay: .5s;
-      animation-fill-mode: forwards;
-      overflow: hidden;
-      border-bottom: 1px solid #8c602c;
-      animation-timing-function: ease-out; }
-      #danny-fishman-music-main .landing > .header > .tabs-wrapper > .tabs {
-        height: min-content;
+      justify-content: center;
+      opacity: 1;
+      transition: .3s all ease-in-out; }
+      #danny-fishman-music-main .root > .backdrop > .header.hidden {
+        display: none; }
+      #danny-fishman-music-main .root > .backdrop > .header > .header-title {
+        background-color: rgba(0, 0, 0, 0.2);
+        text-align: center;
+        height: 80px;
+        border: 1px solid #726654;
+        padding: 20px;
+        position: relative;
+        bottom: 30px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: flex-end;
+        border-radius: 5px;
         opacity: 0;
-        animation: fade-in 1s;
-        animation-delay: .75s;
+        animation: drop .5s, fade-in .5s;
+        animation-delay: .25s;
         animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+        color: #dbd5cf; }
+        #danny-fishman-music-main .root > .backdrop > .header > .header-title > .title {
+          font-size: 32px; }
+        #danny-fishman-music-main .root > .backdrop > .header > .header-title > .sub-title {
+          font-size: 24px; }
+      #danny-fishman-music-main .root > .backdrop > .header > .tabs-wrapper {
+        width: 0;
+        height: 40px;
+        animation: grow-200 .75s;
+        animation-delay: .5s;
+        animation-fill-mode: forwards;
+        overflow: hidden;
+        border-bottom: 1px solid #726654;
         animation-timing-function: ease-out; }
-        #danny-fishman-music-main .landing > .header > .tabs-wrapper > .tabs > .header-tab {
-          padding: 5px;
-          border-radius: 3px;
-          margin: 0 15px;
+        #danny-fishman-music-main .root > .backdrop > .header > .tabs-wrapper > .tabs {
+          height: min-content;
           display: flex;
-          align-items: center;
-          transition: .3s all ease-in;
-          border: 1px solid transparent;
-          cursor: pointer;
-          height: max-content;
-          width: max-content;
-          white-space: no-wrap; }
-          #danny-fishman-music-main .landing > .header > .tabs-wrapper > .tabs > .header-tab:hover {
-            border: 1px solid #ebbd87;
-            background-color: rgba(0, 0, 0, 0.2); }
-  #danny-fishman-music-main .landing > .footer {
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%; }
-    #danny-fishman-music-main .landing > .footer > .icons {
-      width: 350px;
+          justify-content: center;
+          opacity: 0;
+          animation: fade-in 1s;
+          animation-delay: .75s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-out; }
+          #danny-fishman-music-main .root > .backdrop > .header > .tabs-wrapper > .tabs > .header-tab {
+            padding: 5px;
+            border-radius: 3px;
+            margin: 0 15px;
+            display: flex;
+            align-items: center;
+            transition: .3s all ease-in;
+            border: 1px solid transparent;
+            cursor: pointer;
+            height: max-content;
+            width: max-content;
+            white-space: no-wrap; }
+            #danny-fishman-music-main .root > .backdrop > .header > .tabs-wrapper > .tabs > .header-tab:hover {
+              border: 1px solid #463d2a;
+              background-color: rgba(0, 0, 0, 0.2);
+              color: #dbd5cf; }
+    #danny-fishman-music-main .root > .backdrop > .footer {
+      position: absolute;
+      bottom: 20px;
       display: flex;
       align-items: center;
-      justify-content: space-around; }
-      #danny-fishman-music-main .landing > .footer > .icons > i {
-        cursor: pointer;
-        color: #ebbd87;
-        padding: 5px;
-        border: 1px solid transparent;
-        border-radius: 5px;
-        transition: .3s all ease-in;
-        opacity: 0;
-        animation: fade-in 1s, rise .5s;
-        animation-delay: .75s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-out; }
-        #danny-fishman-music-main .landing > .footer > .icons > i:hover {
-          background-color: rgba(0, 0, 0, 0.2);
-          border: 1px solid #ebbd87; }
+      justify-content: center;
+      width: 100%;
+      opacity: 1;
+      transition: .3s all ease-in-out; }
+      #danny-fishman-music-main .root > .backdrop > .footer.hidden {
+        display: none; }
+      #danny-fishman-music-main .root > .backdrop > .footer > .icons {
+        width: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around; }
+        #danny-fishman-music-main .root > .backdrop > .footer > .icons > i {
+          cursor: pointer;
+          color: #938879;
+          padding: 5px;
+          border: 1px solid transparent;
+          border-radius: 5px;
+          transition: .3s all ease-in;
+          opacity: 0;
+          animation: fade-in 1s, rise .5s;
+          animation-delay: .75s;
+          animation-fill-mode: forwards;
+          animation-timing-function: ease-out; }
+          #danny-fishman-music-main .root > .backdrop > .footer > .icons > i:hover {
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #b5aea3; }

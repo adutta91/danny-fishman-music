@@ -1,16 +1,19 @@
 import { createStore } from 'redux';
 
 import {
-  SITE_ENTERED
+  SET_PAGE,
+  LOAD_IMG
 } from './actions';
 
 const initialState = {
-  entered : false
+  page   : 'main',
+  loaded : []
 };
 
 const AppReducer = (state = initialState, action) => {
   switch(action.type) {
-    case SITE_ENTERED: return { ...state, entered : true };
+    case SET_PAGE: return { ...state, page : action.page };
+    case LOAD_IMG: return { ...state, loaded : state.loaded.concat([action.page]) };
     default: return state;
   }
 };

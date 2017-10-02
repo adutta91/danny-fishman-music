@@ -2,24 +2,29 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import MobileWarning from './mobile-warning';
-import Header from './header';
-import Footer from './footer';
+import Main from './main';
+import About from './about';
+import Tour from './tour';
+import Media from './media';
 
 export default class App extends Component {
 
   render() {
     if (window.innerWidth < 1048) return <MobileWarning />
-
+    console.log(this.props.loaded);
     return (
-      <div className={`landing ${this.props.page}`}>
-        <Header />
-        <Footer />
+      <div className='root'>
+        {this.props.loaded.length < 4 ? <div>loading...</div> : null}
+        <About page={this.props.page} />
+        <Media page={this.props.page} />
+        <Main page={this.props.page} />
+        <Tour page={this.props.page} />
       </div>
     );
   }
 };
 
 App.propTypes = {
-  entered : PropTypes.bool.isRequired,
-  page    : PropTypes.string
+  page  : PropTypes.string.isRequired,
+  loaded : PropTypes.arrayOf(PropTypes.string.isRequired)
 };
