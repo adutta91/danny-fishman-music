@@ -67,5 +67,6 @@ export default class Main extends Component {
 };
 
 Main.propTypes = {
-  page : PropTypes.string.isRequired
+  page   : PropTypes.string.isRequired,
+  loaded : PropTypes.array
 };

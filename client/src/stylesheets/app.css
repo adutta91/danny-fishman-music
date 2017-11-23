@@ -28,6 +28,41 @@
   to {
     opacity: 0; } }
 
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: white;
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out; }
+
+@-webkit-keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0; } }
+
+.loading-wrapper {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none; }
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 0; } }
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
@@ -48,10 +83,25 @@ body {
   #danny-fishman-music-main .root > .media > .videos {
     height: 100%; }
     #danny-fishman-music-main .root > .media > .videos > .main-video {
-      height: 80%; }
+      height: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
     #danny-fishman-music-main .root > .media > .videos > .video-index {
       height: 20%;
-      background-color: #444343; }
+      background-color: #444343;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      #danny-fishman-music-main .root > .media > .videos > .video-index > img {
+        margin: 25px;
+        width: 200px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all .2s ease-out;
+        border-radius: 3px; }
+        #danny-fishman-music-main .root > .media > .videos > .video-index > img:hover {
+          border: 2px solid #dbd5cf; }
   #danny-fishman-music-main .root > .backdrop {
     width: 100vw;
     height: 100vh;
@@ -108,20 +158,18 @@ body {
           animation-timing-function: ease-out; }
           #danny-fishman-music-main .root > .backdrop > .header > .tabs-wrapper > .tabs > .header-tab {
             padding: 5px;
-            border-radius: 3px;
             margin: 0 15px;
             display: flex;
             align-items: center;
-            transition: .3s all ease-in;
+            transition: .2s all ease-in;
             border: 1px solid transparent;
             cursor: pointer;
             height: max-content;
             width: max-content;
             white-space: no-wrap; }
             #danny-fishman-music-main .root > .backdrop > .header > .tabs-wrapper > .tabs > .header-tab:hover {
-              border: 1px solid #463d2a;
               background-color: rgba(0, 0, 0, 0.2);
-              color: #dbd5cf; }
+              color: white; }
     #danny-fishman-music-main .root > .backdrop > .footer {
       position: absolute;
       bottom: 20px;
@@ -143,8 +191,7 @@ body {
           color: #938879;
           padding: 5px;
           border: 1px solid transparent;
-          border-radius: 5px;
-          transition: .3s all ease-in;
+          transition: .2s all ease-in;
           opacity: 0;
           animation: fade-in 1s, rise .5s;
           animation-delay: .75s;

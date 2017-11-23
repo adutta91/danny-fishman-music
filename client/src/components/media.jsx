@@ -61,5 +61,6 @@ export default class Media extends Component {
 };
 
 Media.propTypes = {
-  page : PropTypes.string.isRequired
+  page   : PropTypes.string.isRequired,
+  loaded : PropTypes.array
 };

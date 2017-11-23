@@ -50,6 +50,7 @@ export default class About extends Component {
   render() {
     return (
       <div style={this.getStyle()} className='about backdrop'>
+        {this.props.loaded.length < 4 ? <div className='loading-wrapper'><div className='spinner'></div></div> : null}
         {this.props.page == 'about' ? <BackButton position='right' /> : null}
         About
       </div>
@@ -58,5 +59,6 @@ export default class About extends Component {
 };
 
 About.propTypes = {
-  page : PropTypes.string.isRequired
+  page   : PropTypes.string.isRequired,
+  loaded : PropTypes.array
 };

@@ -14,11 +14,11 @@ export default class App extends Component {
     let page = this.props.page || 'main';
     return (
       <div className='root'>
-        {this.props.loaded.length < 4 ? <div>loading...</div> : null}
-        <About page={page} />
-        <Media page={page} />
-        <Main page={page} />
-        <Tour page={page} />
+        {this.props.loaded.length < 4 ? <div className='loading-wrapper'><div className='spinner'></div></div> : null}
+        <About loaded={this.props.loaded} page={page} />
+        <Media loaded={this.props.loaded} page={page} />
+        <Main loaded={this.props.loaded} page={page} />
+        <Tour loaded={this.props.loaded} page={page} />
       </div>
     );
   }

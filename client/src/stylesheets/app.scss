@@ -33,6 +33,48 @@ $dark-icon-color: #938879;
 }
 
 
+// spinner styling
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: white;
+
+  border-radius: 100%;
+  -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
+  animation: sk-scaleout 1.0s infinite ease-in-out;
+}
+
+@-webkit-keyframes sk-scaleout {
+  0% { -webkit-transform: scale(0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
+.loading-wrapper {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+
+@keyframes sk-scaleout {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 100% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+    opacity: 0;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 200;
@@ -59,14 +101,33 @@ body {
     >.media {
       >.videos {
         height: 100%;
-        
+
         >.main-video {
           height: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
 
         >.video-index {
           height: 20%;
           background-color: #444343;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          > img {
+              margin: 25px;
+              width: 200px;
+              border: 2px solid rgba(0,0,0,0);
+              cursor: pointer;
+              transition: all .2s ease-out;
+              border-radius: 3px;
+
+              &:hover {
+                border: 2px solid $light-text-color;
+              }
+          }
         }
       }
     }
@@ -140,11 +201,11 @@ body {
 
             >.header-tab {
               padding: 5px;
-              border-radius: 3px;
+              // border-radius: 3px;
               margin: 0 15px;
               display: flex;
               align-items: center;
-              transition: .3s all ease-in;
+              transition: .2s all ease-in;
               border: 1px solid transparent;
               cursor: pointer;
               height: max-content;
@@ -152,9 +213,9 @@ body {
               white-space: no-wrap;
 
               &:hover {
-                border: 1px solid $dark-text-color;
+                // border: 1px solid $dark-text-color;
                 background-color: rgba(0,0,0, 0.2);
-                color: $light-text-color;
+                color: white;
               }
             }
           }
@@ -186,8 +247,8 @@ body {
             color: $dark-icon-color;
             padding: 5px;
             border: 1px solid transparent;
-            border-radius: 5px;
-            transition: .3s all ease-in;
+            // border-radius: 5px;
+            transition: .2s all ease-in;
             opacity: 0;
             animation: fade-in 1s, rise .5s;
             animation-delay: .75s;

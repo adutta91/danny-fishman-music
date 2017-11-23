@@ -58,5 +58,6 @@ export default class Tour extends Component {
 };
 
 Tour.propTypes = {
-  page : PropTypes.string.isRequired
+  page   : PropTypes.string.isRequired,
+  loaded : PropTypes.array
 };

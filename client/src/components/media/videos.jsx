@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import VideoIndex from './video-index';
-import MainVideo from './main-video';
+import MainVideoContainer from '../../containers/main-video-container';
 
 export default class Videos extends Component {
   render() {
     return (
       <div className='videos'>
-        <MainVideo />
+        <MainVideoContainer />
         <VideoIndex />
       </div>
     );
