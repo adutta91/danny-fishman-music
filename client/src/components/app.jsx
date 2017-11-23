@@ -11,20 +11,20 @@ export default class App extends Component {
 
   render() {
     if (window.innerWidth < 1048) return <MobileWarning />
-
+    let page = this.props.page || 'main';
     return (
       <div className='root'>
         {this.props.loaded.length < 4 ? <div>loading...</div> : null}
-        <About page={this.props.page} />
-        <Media page={this.props.page} />
-        <Main page={this.props.page} />
-        <Tour page={this.props.page} />
+        <About page={page} />
+        <Media page={page} />
+        <Main page={page} />
+        <Tour page={page} />
       </div>
     );
   }
 };
 
 App.propTypes = {
-  page  : PropTypes.string.isRequired,
+  page  : PropTypes.string,
   loaded : PropTypes.arrayOf(PropTypes.string.isRequired)
 };

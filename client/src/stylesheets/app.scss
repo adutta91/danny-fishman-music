@@ -41,8 +41,35 @@ body {
 }
 
 #danny-fishman-music-main {
+  .back-button {
+    color: gray;
+    position: absolute;
+    top: 20px;
+
+    &.right {
+      right: 20px;
+    }
+    &.left {
+      left: 20px;
+    }
+  }
   .root {
     display: flex;
+
+    >.media {
+      >.videos {
+        height: 100%;
+        
+        >.main-video {
+          height: 80%;
+        }
+
+        >.video-index {
+          height: 20%;
+          background-color: #444343;
+        }
+      }
+    }
 
     >.backdrop {
       width: 100vw;

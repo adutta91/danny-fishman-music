@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import BackButton from './back-button';
+
 import { images } from '../app/app';
 import { setPage, load } from '../app/actions';
 import $ from 'jquery';
+
+import Videos from './media/videos';
 
 export default class Media extends Component {
 
@@ -30,12 +34,15 @@ export default class Media extends Component {
       case 'main':
         style.width = 0;
         style.overflow = 'hidden';
+        break;
       case 'about':
         style.width = 0;
         style.overflow = 'hidden';
+        break;
       case 'tour':
         style.width = 0;
         style.overflow = 'hidden';
+        break;
       case 'media': break;
       default: break;
     }
@@ -46,8 +53,8 @@ export default class Media extends Component {
   render() {
     return (
       <div style={this.getStyle()} className='media backdrop'>
-        <i className='fa fa-2x fa-chevron-right' onClick={() => { console.log('clicked'); setPage('main');}}/>
-        Media
+        {this.props.page == 'media' ? <BackButton position='right' /> : null}
+        <Videos />
       </div>
     );
   }

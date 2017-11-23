@@ -34,8 +34,24 @@ body {
   margin: 0;
   color: #463d2a; }
 
+#danny-fishman-music-main .back-button {
+  color: gray;
+  position: absolute;
+  top: 20px; }
+  #danny-fishman-music-main .back-button.right {
+    right: 20px; }
+  #danny-fishman-music-main .back-button.left {
+    left: 20px; }
+
 #danny-fishman-music-main .root {
   display: flex; }
+  #danny-fishman-music-main .root > .media > .videos {
+    height: 100%; }
+    #danny-fishman-music-main .root > .media > .videos > .main-video {
+      height: 80%; }
+    #danny-fishman-music-main .root > .media > .videos > .video-index {
+      height: 20%;
+      background-color: #444343; }
   #danny-fishman-music-main .root > .backdrop {
     width: 100vw;
     height: 100vh;

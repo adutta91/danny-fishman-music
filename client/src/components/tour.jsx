@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { images } from '../app/app';
 import { setPage, load } from '../app/actions';
 import $ from 'jquery';
+import BackButton from './back-button';
 
 export default class Tour extends Component {
 
@@ -30,13 +31,16 @@ export default class Tour extends Component {
       case 'main':
         style.width = 0;
         style.overflow = 'hidden';
+        break;
       case 'about':
         style.width = 0;
         style.overflow = 'hidden';
+        break;
       case 'tour': break;
       case 'media':
         style.width = 0;
         style.overflow = 'hidden';
+        break;
       default: break;
     }
 
@@ -46,7 +50,7 @@ export default class Tour extends Component {
   render() {
     return (
       <div style={this.getStyle()} className='tour backdrop'>
-        <i className='fa fa-2x fa-chevron-left' onClick={() => { console.log('clicked'); setPage('main');}}/>
+        {this.props.page == 'tour' ? <BackButton position='left' /> : null}
         Tour
       </div>
     );

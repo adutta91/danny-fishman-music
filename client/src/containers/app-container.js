@@ -5,7 +5,7 @@ import App from '../components/app.jsx';
 
 const mapStateToProps = (state, props) => {
   return {
-    page   : state.page,
+    page   : state.page || props.match.params.page,
     loaded : state.loaded
   };
 };

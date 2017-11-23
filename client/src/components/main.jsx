@@ -41,12 +41,15 @@ export default class Main extends Component {
       case 'about':
         style.width = 0;
         style.overflow = 'hidden';
+        break;
       case 'tour':
         style.width = 0;
         style.overflow = 'hidden';
+        break;
       case 'media':
         style.width = 0;
         style.overflow = 'hidden';
+        break;
       default: break;
     }
 

@@ -6,7 +6,7 @@ import {
 } from './actions';
 
 const initialState = {
-  page   : 'main',
+  page   : null,
   loaded : []
 };
 
